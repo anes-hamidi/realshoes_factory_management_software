@@ -5,7 +5,7 @@ import 'pages/salesPades/sales_Page.dart';
 
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+  
 
 
   runApp(const MyApp());
