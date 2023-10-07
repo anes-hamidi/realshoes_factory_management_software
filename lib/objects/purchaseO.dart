@@ -1,11 +1,15 @@
-class Purchase {
-  int? id;
-  int supplierId;
-  String purchaseDate;
-  int quantity;
-  double totalAmount;
+// ignore_for_file: file_names
+import 'package:flutter/foundation.dart' show immutable;
 
-  Purchase({
+@immutable
+class Purchase {
+  final int? id;
+  final int supplierId;
+  final String purchaseDate;
+  final int quantity;
+  final double totalAmount;
+
+  const Purchase({
     this.id,
     required this.supplierId,
     required this.purchaseDate,

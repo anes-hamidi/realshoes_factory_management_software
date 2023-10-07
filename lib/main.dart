@@ -1,7 +1,11 @@
 // ignore_for_file: must_be_immutable, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'pages/salesPades/sales_Page.dart';
+import 'responsive/desktop_Screen.dart';
+import 'responsive/mobile_Screen.dart';
+import 'responsive/tablet_Screen.dart';
+import 'responsive/responsiveLayout.dart';
+
 
 
 void main() {
@@ -28,8 +32,11 @@ class FactoryManagementApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SalesScreen(),
-    );
+    return  const LayoutScreen(
+        TabletScaffold:  TabletScreen(),
+        MobileScaffold:  MobileScreen(),
+        DesktopScaffold:  DesktopScreen(),
+      );
+    
   }
 }

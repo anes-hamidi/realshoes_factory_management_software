@@ -1,14 +1,17 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:realshoes_factory_management_software/pages/stockPages/stock_Page.dart';
-import '../constans/navigation.dart';
-import '../pages/analyticPages/analytic_page.dart';
-import '../pages/employeePages/employe_page.dart';
+import 'package:realshoes_factory_management_software/pages/employeePages/Tablet_employee_screen.dart';
+import 'package:realshoes_factory_management_software/pages/payemebtPages/Tablet_payment_page.dart';
+import '../../constans/navigation.dart';
+import '../../pages/analyticPages/Tablet_analytic_screen.dart';
 
-import '../pages/payemebtPages/payment_Page.dart';
-import '../pages/salesPades/sales_Page.dart';
+import '../../pages/salesPades/tablet_sales_screen.dart';
+import '../../pages/stockPages/Tablet_stock_screen.dart';
+import '../Drawer/Drawer.dart';
 
-class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({super.key});
+class MyAppBarTablet extends StatelessWidget implements PreferredSizeWidget {
+  const MyAppBarTablet({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(150);
@@ -20,10 +23,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         title: const Text("Real Shoes Management System",
             style: TextStyle(color: Colors.white, fontSize: 24)),
         centerTitle: true,
-        leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
+        leading: IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () {
+              const MobileDrawer();
+            }),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.3,
               child: TextField(
@@ -38,7 +45,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
           ),
-          IconButton(icon: const Icon(Icons.notifications), onPressed: () {}),
+         
         ],
         bottom: PreferredSize(
             preferredSize: const Size.fromHeight(80),
@@ -47,10 +54,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                     child: OutlinedButton(
                         onPressed: () {
-                          Navigator.push(
-                          context,
-                          NoAnimationPageRoute(page: const StockPage())  
-                      );
+                          Navigator.push(context,
+                              NoAnimationPageRoute(page:  const StockScreenTablet()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -62,10 +67,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                     child: OutlinedButton(
                         onPressed: () {
-                             Navigator.push(
-                          context,
-                          NoAnimationPageRoute(page: const PaymentPage())  
-                      );
+                          Navigator.push(context,
+                              NoAnimationPageRoute(page: const PaymentScreenTablet()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -77,10 +80,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                     child: OutlinedButton(
                         onPressed: () {
-                              Navigator.push(
-                          context,
-                          NoAnimationPageRoute(page:  SalesScreen())  
-                      );
+                          Navigator.push(context,
+                              NoAnimationPageRoute(page: const SalesScreenTablet()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -92,10 +93,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                     child: OutlinedButton(
                         onPressed: () {
-                                  Navigator.push(
-                          context,
-                          NoAnimationPageRoute(page: const EmployeeScreen())  
-                      );
+                          Navigator.push(
+                              context,
+                              NoAnimationPageRoute(
+                                  page: const EmployeeScreenTablet()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -107,10 +108,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                     child: OutlinedButton(
                         onPressed: () {
-                                      Navigator.push(
-                          context,
-                          NoAnimationPageRoute(page: const Analytic())  
-                      );
+                          Navigator.push(context,
+                              NoAnimationPageRoute(page: const AnalyseScreenTablet()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,

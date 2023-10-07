@@ -1,13 +1,17 @@
 // sales
-class Sales {
-  int? id;
-  int customerId;
-  int productId;
-  String saleDate;
-  int quantity;
-  double totalAmount;
+// ignore_for_file: file_names
+import 'package:flutter/foundation.dart' show immutable;
 
-  Sales({
+@immutable
+class Sales {
+  final int? id;
+  final int customerId;
+  final int productId;
+  final String saleDate;
+  final int quantity;
+  final double totalAmount;
+
+ const Sales({
     this.id,
     required this.customerId,
     required this.productId,

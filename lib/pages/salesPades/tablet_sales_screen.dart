@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
-class TabletSalesOperationScreen extends StatelessWidget {
+import '../../widget/AppBar/appbareTablet.dart';
+
+class SalesScreenTablet extends StatelessWidget {
+  const SalesScreenTablet({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Sales Operation'),
-      ),
-      body: Row(
+       appBar:  const MyAppBarTablet(),
+      body: Column(
         children: [
-          // Add the widgets for the tablet layout of the sales operation screen here.
+         Center(
+            child:  Container(
+              decoration: const BoxDecoration(),
+            child:const Text("Sales Tablet"),
+          ),),
+          // Add the widgets for the desktop layout of the sales operation screen here.
         ],
       ),
     );

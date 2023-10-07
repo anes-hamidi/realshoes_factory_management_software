@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:realshoes_factory_management_software/widget/appbare.dart';
 
-class MobileSalesOperationScreen extends StatelessWidget {
+import '../../widget/AppBar/appbareMobile.dart';
+
+class SalesScreenMobile extends StatelessWidget {
+  const SalesScreenMobile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBar(),
-      body: ListView(
+       appBar: const MyAppBarMobile(),
+      body: Column(
         children: [
-          // Add the widgets for the mobile layout of the sales operation screen here.
-          
+         Center(
+            child:  Container(
+              decoration: const BoxDecoration(),
+            child: const Text("Sales Mobile"),
+          ),),
+          // Add the widgets for the desktop layout of the sales operation screen here.
         ],
       ),
     );

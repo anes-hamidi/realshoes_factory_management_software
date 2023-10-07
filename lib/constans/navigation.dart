@@ -10,6 +10,6 @@ class NoAnimationPageRoute extends PageRouteBuilder {
             Animation<double> secondaryAnimation,
           ) =>
               page,
-          transitionDuration: Duration(seconds: 0),
+          transitionDuration: const Duration(seconds: 0),
         );
 }

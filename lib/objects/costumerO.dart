@@ -1,28 +1,16 @@
 
-// Customer
-class Customer {
-  int? id;
+class User {
+  int id;
   String name;
-  String email;
+  int age;
 
-  Customer({this.id, required this.name, required this.email});
+  User({required this.id, required this.name, required this.age});
 
-  // Convert a Customer object into a Map for database operations
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'name': name,
-      'email': email,
+      'age': age,
     };
   }
-
-  // Create a Customer object from a Map retrieved from the database
-  factory Customer.fromMap(Map<String, dynamic> map) {
-    return Customer(
-      id: map['id'],
-      name: map['name'],
-      email: map['email'],
-    );
-  }
 }
-

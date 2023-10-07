@@ -1,12 +1,16 @@
 
+// ignore_for_file: file_names
+import 'package:flutter/foundation.dart' show immutable;
+
+@immutable
 // invoices
 class Invoice {
-  int? id;
-  int customerId;
-  String invoiceDate;
-  double totalAmount;
+  final int? id;
+  final int customerId;
+  final String invoiceDate;
+  final double totalAmount;
 
-  Invoice({
+  const Invoice({
     this.id,
     required this.customerId,
     required this.invoiceDate,

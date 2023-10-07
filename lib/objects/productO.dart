@@ -1,10 +1,14 @@
 // Product
-class Product {
-  int? id;
-  String name;
-  double price;
+// ignore_for_file: file_names
+import 'package:flutter/foundation.dart' show immutable;
 
-  Product({this.id, required this.name, required this.price});
+@immutable
+class Products {
+  final int? id;
+  final String name;
+  final double price;
+
+  const Products(String text, {this.id, required this.name, required this.price});
 
   // Convert a Product object into a Map for database operations
   Map<String, dynamic> toMap() {
@@ -16,12 +20,12 @@ class Product {
   }
 
   // Create a Product object from a Map retrieved from the database
-  factory Product.fromMap(Map<String, dynamic> map) {
-    return Product(
-      id: map['id'],
-      name: map['name'],
-      price: map['price'],
-    );
-  }
+  //factory Products.fromMap(Map<String, dynamic> map) {
+  //  return Products(
+   //   id: map['id'],
+    //  name: map['name'],
+    //  price: map['price'],
+  //  );
+//  }
 }
 

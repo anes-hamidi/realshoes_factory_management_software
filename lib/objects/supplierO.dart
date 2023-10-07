@@ -1,11 +1,15 @@
 
+// ignore_for_file: file_names, non_constant_identifier_names
+import 'package:flutter/foundation.dart' show immutable;
+
+@immutable
 // supplires
 class Supplier {
-  int? id;
-  String type;
-  double total_amount;
+  final int? id;
+  final String type;
+  final double total_amount;
 
-  Supplier({
+const Supplier({
     this.id,
     required this.type,
     required this.total_amount,
