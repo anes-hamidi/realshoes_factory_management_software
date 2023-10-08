@@ -1,31 +1,17 @@
-// Product
-// ignore_for_file: file_names
-import 'package:flutter/foundation.dart' show immutable;
-
-@immutable
-class Products {
-  final int? id;
+class Product {
+  final String id;
   final String name;
+  final String description;
+  final int pointur;
   final double price;
+  final double cost;
 
-  const Products(String text, {this.id, required this.name, required this.price});
-
-  // Convert a Product object into a Map for database operations
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'price': price,
-    };
-  }
-
-  // Create a Product object from a Map retrieved from the database
-  //factory Products.fromMap(Map<String, dynamic> map) {
-  //  return Products(
-   //   id: map['id'],
-    //  name: map['name'],
-    //  price: map['price'],
-  //  );
-//  }
+  Product({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.pointur,
+    required this.price,
+    required this.cost,
+  });
 }
-
