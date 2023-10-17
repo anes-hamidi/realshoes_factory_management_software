@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:realshoes_factory_management_software/widget/AppBar/appbareMobile.dart';
 
 class EmployeeScreenMobile extends StatelessWidget {
   const EmployeeScreenMobile({super.key});
@@ -10,7 +9,6 @@ class EmployeeScreenMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: MyAppBarMobile(),
       body: Center(
         child: Text("Employees Mobile")
       ),

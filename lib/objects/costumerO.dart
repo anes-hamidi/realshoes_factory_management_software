@@ -1,16 +1,16 @@
 
+// ignore_for_file: file_names
+
 class User {
-  int id;
-  String name;
-  int age;
+  final int id;
+  final String name;
+  final int age;
 
-  User({required this.id, required this.name, required this.age});
+  User(
+    {
+      required this.id,
+      required this.name,
+      required this.age});
 
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'age': age,
-    };
-  }
+  
 }

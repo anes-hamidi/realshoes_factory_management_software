@@ -1,7 +1,5 @@
 // ignore_for_file: file_names
-import 'package:flutter/foundation.dart' show immutable;
 
-@immutable
 class Purchase {
   final int? id;
   final int supplierId;
@@ -17,26 +15,4 @@ class Purchase {
     required this.totalAmount,
   });
 
-  // Convert a Purchase object into a Map for database operations
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'supplier_id': supplierId,
-      'purchase_date': purchaseDate,
-      'quantity': quantity,
-      'total_amount': totalAmount,
-    };
-  }
-
-  // Create a Purchase object from a Map retrieved from the database
-  factory Purchase.fromMap(Map<String, dynamic> map) {
-    return Purchase(
-      id: map['id'],
-      supplierId: map['supplier_id'],
-      purchaseDate: map['purchase_date'],
-      quantity: map['quantity'],
-      totalAmount: map['total_amount'],
-    );
-  }
 }
-

@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class MobileDrawer extends StatelessWidget {
-  const MobileDrawer({Key? key}) : super(key: key);
+class DesktopDrawer extends StatelessWidget {
+  const DesktopDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

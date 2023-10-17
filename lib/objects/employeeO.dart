@@ -11,24 +11,11 @@ class Employee {
   final String adress;
   final String designation;
 
-  const Employee({this.id, required this.name, required this.designation, required this.salary, required this.phone, required this.adress});
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'designation': designation,
-    };
-  }
-
-  factory Employee.fromMap(Map<String, dynamic> map) {
-    return Employee(
-      id: map['id'],
-      name: map['name'],
-      designation: map['designation'],
-      salary:map["salary"],
-      phone:map["phone"],
-      adress:map["address"]
-    );
-  }
+  const Employee(
+    {this.id,
+     required this.name,
+      required this.designation,
+      required this.salary,      
+      required this.phone,
+      required this.adress});  
 }

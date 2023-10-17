@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:realshoes_factory_management_software/widget/AppBar/appbareDesktop.dart';
 
 class EmployeeScreenDesktop extends StatelessWidget {
   const EmployeeScreenDesktop({super.key});
@@ -9,8 +8,9 @@ class EmployeeScreenDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: MyAppBarDesktop(),
+    return  Scaffold(
+            appBar: AppBar(),
+
       body: Center(
         child: Text("Employees Desktop")
       ),

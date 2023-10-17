@@ -1,13 +1,15 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:realshoes_factory_management_software/pages/analyticPages/Mobile_analytic_screen.dart';
-import 'package:realshoes_factory_management_software/pages/employeePages/Mobile_employee_screen.dart';
-import 'package:realshoes_factory_management_software/pages/payemebtPages/Mobile_payment_screen.dart';
-import 'package:realshoes_factory_management_software/pages/salesPades/mobile_sales_screen.dart';
-import 'package:realshoes_factory_management_software/pages/stockPages/Mobile_stock_screen.dart';
+
+import '../../pages/analyticPages/responsiveAnaliseScreen.dart';
+import '../../pages/employeePages/responsiveEmployeeScreen.dart';
+import '../../pages/payemebtPages/responfivePaymentScreen.dart';
+
 import '../../constans/navigation.dart';
 
+import '../../pages/salesPages/responsiveSalesScreen.dart';
+import '../../pages/stockPages/responsiveStockScreen.dart';
 import '../Drawer/Drawer.dart';
 
 class MyAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
@@ -55,7 +57,7 @@ class MyAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
                     child: OutlinedButton(
                         onPressed: () {
                           Navigator.push(context,
-                              NoAnimationPageRoute(page: const StockScreenMobile()));
+                              NoAnimationPageRoute(page: const StockScreenResponsive()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -68,7 +70,7 @@ class MyAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
                     child: OutlinedButton(
                         onPressed: () {
                           Navigator.push(context,
-                              NoAnimationPageRoute(page: const PaymentScreenMobile()));
+                              NoAnimationPageRoute(page: const PaymentScreenResponsive()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -81,7 +83,7 @@ class MyAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
                     child: OutlinedButton(
                         onPressed: () {
                           Navigator.push(context,
-                              NoAnimationPageRoute(page: const SalesScreenMobile()));
+                              NoAnimationPageRoute(page: const SalesScreenResponsive()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -96,7 +98,7 @@ class MyAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
                           Navigator.push(
                               context,
                               NoAnimationPageRoute(
-                                  page: const EmployeeScreenMobile()));
+                                  page: const EmployeeScreenResponsive()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -109,7 +111,7 @@ class MyAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
                     child: OutlinedButton(
                         onPressed: () {
                           Navigator.push(context,
-                              NoAnimationPageRoute(page: const AnalyseScreenMobile()));
+                              NoAnimationPageRoute(page: const AnalyseScreenResponsive()));
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.black,

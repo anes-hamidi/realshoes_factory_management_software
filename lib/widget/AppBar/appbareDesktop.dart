@@ -3,8 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constans/navigation.dart';
-import '../../pages/productList.dart';
-import '../Forms/EntryForm.dart';
+import '../../pages/stockPages/productList.dart';
 
 class MyAppBarDesktop extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBarDesktop({super.key});
@@ -36,17 +35,12 @@ class MyAppBarDesktop extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
         ),
-        IconButton(
-            onPressed: () {
-              Navigator.push(
-                  context, NoAnimationPageRoute(page: InsertUserForm()));
-            },
-            icon: Icon(Icons.add_box_rounded)),
+        
         IconButton(
           icon: const Icon(Icons.shopping_cart),
           tooltip: 'Open shopping cart',
           onPressed: () {
-            Navigator.push(context, NoAnimationPageRoute(page:  ProductListScreen()));
+            Navigator.push(context, NoAnimationPageRoute(page:  const ProductCardScreen()));
             // handle the press
           },
         ),

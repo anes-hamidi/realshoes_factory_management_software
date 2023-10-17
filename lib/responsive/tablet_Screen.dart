@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:realshoes_factory_management_software/widget/AppBar/appbareTablet.dart';
+import 'package:realshoes_factory_management_software/widget/AppBar/appbareMobile.dart';
+
+import '../pages/salesPages/responsiveSalesScreen.dart';
 
 class TabletScreen extends StatefulWidget {
   const TabletScreen({super.key});
@@ -10,12 +12,9 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      appBar: const MyAppBarTablet(),
-      body: Container(
-        decoration: const BoxDecoration(),
-        child: const Center(child: Text('Tablet Screen')),
-      ),
+    return   const Scaffold(
+      appBar: MyAppBarMobile(),
+      body: SalesScreenResponsive(),
     );
   }
 }

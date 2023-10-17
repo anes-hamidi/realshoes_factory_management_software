@@ -1,26 +1,24 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
-import '../database/initializeDataBase.dart';
-import '../objects/productO.dart';
-import '../widget/realTimeUpdate/productCard.dart';
+import '../../objects/productO.dart';
+import '../../widget/realTimeUpdate/productCard.dart';
+import 'package:realshoes_factory_management_software/database/Product/getProduct.dart';
 
-class ProductListScreen extends StatelessWidget {
-  const ProductListScreen({super.key});
+class ProductCardScreen extends StatelessWidget {
+  const ProductCardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Product List'),
-      ),
-      body: FutureBuilder<List<Product>>(
-        future: getAllProducts(),
+    return FutureBuilder<List<Product>>(
+        future: getProducts(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: 5,
+                crossAxisCount: 2,
+                mainAxisSpacing: 3,
               ),
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
@@ -37,7 +35,7 @@ class ProductListScreen extends StatelessWidget {
             );
           }
         },
-      ),
+      
     );
   }
 }

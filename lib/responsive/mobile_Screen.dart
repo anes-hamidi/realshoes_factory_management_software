@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:realshoes_factory_management_software/widget/AppBar/appbareMobile.dart';
 
+import '../pages/salesPages/responsiveSalesScreen.dart';
+
 
 
 class MobileScreen extends StatefulWidget {
@@ -16,13 +18,9 @@ class MobileScreen extends StatefulWidget {
 class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      appBar: const MyAppBarMobile(),
-      body: Container(
-        decoration: const BoxDecoration(),
-        child: const Center(child: Text('Mobile Screen')),
-        )
-      
+    return   const Scaffold(
+      appBar: MyAppBarMobile(),
+      body: SalesScreenResponsive(),
     );
         
   }
