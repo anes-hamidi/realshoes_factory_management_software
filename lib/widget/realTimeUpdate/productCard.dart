@@ -1,33 +1,56 @@
-// ignore_for_file: file_names
+
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 
 import '../../objects/productO.dart';
+import '../ProductWidget/convertImage.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
   final Product product;
 
-  const ProductCard({super.key, required this.product});
+  ProductCard({required this.product});
+
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+ 
 
   @override
   Widget build(BuildContext context) {
+    
     return Card(
-      child: Container(
-        decoration: imageBase64 != null
-            ? BoxDecoration(
-                image: DecorationImage(
-                  image: MemoryImage(base64Decode(imageBase64!)),
-                  fit: BoxFit.cover,
+     
+      elevation: 3,
+      margin: EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+         
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+               
+                Text(
+                  widget.product.name,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              )
-            : null,
-        child: Column(
-          children: [
-            // Your product card content goes here
-            // ...
-          ],
-        ),
+                Text(widget.product.colors),
+                Text('450.00DZ'),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
+

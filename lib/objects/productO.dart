@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 
+import 'dart:io';
 
-import 'dart:ui';
 
-class Product {
+/*class Product {
 final String name;
   final String description;
   //final int size;
@@ -13,8 +13,7 @@ final String name;
   //final double cost;
  // final DateTime releaseDate;
   //final String quantity;
-  final Image imageUrl;
-
+final Image image;
   Product({
     required this.name,
     required this.description,
@@ -25,6 +24,24 @@ final String name;
    // required this.cost,
     //required this.releaseDate,
     //required this.quantity,
-    required this.imageUrl,
+    required this.image,
   });
+}*/
+
+class Product {
+  String name;
+  int size;
+  String colors;
+
+
+  Product(
+      {required this.name,
+      required this.size,
+      required this.colors
+      
+      
+      });
+      
 }
+
+ 

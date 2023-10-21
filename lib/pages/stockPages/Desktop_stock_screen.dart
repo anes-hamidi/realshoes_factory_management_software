@@ -1,10 +1,11 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-
+import '../../constans/navigation.dart';
 
 
 import '../../widget/SalesWidget/calculator.dart';
+import '../../widget/Forms/addProductForm.dart';
 import 'productList.dart';
 
 
@@ -52,6 +53,24 @@ class _StockScreenDesktopState extends State<StockScreenDesktop> {
                     
                      
                   ),
+                  child: Column(
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 10)),
+                      Row(
+                        children: [
+                          OutlinedButton(
+                            
+                            onPressed: () {
+                              Navigator.push(context, NoAnimationPageRoute(page: AddProductForm() ));
+                            },
+                            child: Text("Add Stock", style: TextStyle(fontSize: 20, color: Colors.black),),
+
+                          ),
+
+                        ]
+                      )
+                    ]
+                  )
 
                 ),
 

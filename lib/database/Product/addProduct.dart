@@ -1,32 +1,25 @@
-import 'dart:convert';
-import 'package:flutter/material.dart';
+
+
+
 import 'package:realshoes_factory_management_software/database/connection.dart';
 import 'package:mongo_dart/mongo_dart.dart';
 
 Future<Db> insertProduct(
-    String name,
-    String description,
-    int pointur,
-    double price,
-    double cost,
-    PickedFile? imageUrl,
+  String name,
+  int size,
+  String colors, {required String name}
 ) async {
   final db = await connectToMongoDB();
-  final collection = db.collection('products');
+  final collection = db.collection('products_shoes');
 
-  String? imageBase64;
-  if (imageUrl != null) {
-    final imageBytes = await imageUrl.readAsBytes();
-    imageBase64 = base64Encode(imageBytes);
-  }
+  // If an image is provided, read it as bytes and insert it into the database.
+  
 
   await collection.insertOne({
     'name': name,
-    'description': description,
-    'pointur': pointur,
-    'price': price,
-    'cost': cost,
-    'image': imageBase64 // Store the base64-encoded image
+    'size': size,
+    'colors': colors
+   
   });
 
   return db;
